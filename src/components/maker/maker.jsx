@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import CardMaker from "../cardmaker/cardmaker";
+import CardPreview from "../cardpreview/cardpreview";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 import styles from "./maker.module.css";
@@ -18,8 +20,12 @@ const Maker = ({ authService }) => {
     });
   });
   return (
-    <section className="styles.maker">
+    <section className={styles.maker}>
       <Header onLogout={onLogout} />
+      <section className={styles.Card}>
+        <CardMaker />
+        <CardPreview />
+      </section>
       <Footer />
     </section>
   );
