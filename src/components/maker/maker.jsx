@@ -43,6 +43,7 @@ const Maker = ({ authService }) => {
     },
   ]);
   const navigate = useNavigate();
+
   const onLogout = () => {
     authService.logout();
   };
@@ -54,11 +55,16 @@ const Maker = ({ authService }) => {
       }
     });
   });
+
+  const addCard = (card) => {
+    const updated = [...cards, card];
+    setCards(updated);
+  };
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <section className={styles.Card}>
-        <CardMaker cards={cards} />
+        <CardMaker cards={cards} addCard={addCard} />
         <CardPreview cards={cards} />
       </section>
       <Footer />
