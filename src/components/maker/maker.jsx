@@ -16,7 +16,7 @@ const Maker = ({ FileInput, authService }) => {
       title: "Software Engineer",
       email: "jooyoung.dev@gmail.com",
       message: "go for it",
-      fileName: "jooyoung",
+      fileName: null,
       fileURL: null,
     },
     2: {
@@ -27,8 +27,8 @@ const Maker = ({ FileInput, authService }) => {
       title: "Software Engineer",
       email: "jooyoung.dev@gmail.com",
       message: "go for it",
-      fileName: "jooyoung",
-      fileURL: "joyoung.png",
+      fileName: null,
+      fileURL: null,
     },
     3: {
       id: "3",
@@ -38,7 +38,7 @@ const Maker = ({ FileInput, authService }) => {
       title: "Software Engineer",
       email: "jooyoung.dev@gmail.com",
       message: "go for it",
-      fileName: "jooyoung",
+      fileName: null,
       fileURL: null,
     },
   });
@@ -57,7 +57,7 @@ const Maker = ({ FileInput, authService }) => {
     });
   });
 
-  const createOrupdateCard = (card) => {
+  const createupdateCard = (card) => {
     setCards((cards) => {
       const updated = { ...cards };
       updated[card.id] = card;
@@ -79,8 +79,8 @@ const Maker = ({ FileInput, authService }) => {
         <CardMaker
           FileInput={FileInput}
           cards={cards}
-          addCard={createOrupdateCard}
-          updateCard={createOrupdateCard}
+          addCard={createupdateCard}
+          updateCard={createupdateCard}
           deleteCard={deleteCard}
         />
         <CardPreview cards={cards} />
