@@ -6,8 +6,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
   const onSubmit = (event) => {
     deleteCard(card);
   };
-  const { name, company, title, email, message, theme, fileName, fileURL } =
-    card;
+  const { name, company, title, email, message, theme, fileName } = card;
 
   const onFileChange = (file) => {
     updateCard({
@@ -16,6 +15,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
       fileURL: file.url,
     });
   };
+
   const onChange = (event) => {
     if (event.currentTarget == null) {
       return;
