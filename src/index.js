@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
+import { BrowserRouter } from "react-router-dom";
 import AuthService from "./service/auth_service";
 import ImageUploader from "./service/image_uploader";
 import ImageFileInput from "./components/image_file_input/image_file_input";
