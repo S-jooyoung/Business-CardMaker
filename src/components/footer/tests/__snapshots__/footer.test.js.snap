@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer render 1`] = `
+<footer
+  className="footer"
+>
+  <p
+    className="title"
+  >
+    Make your value
+  </p>
+</footer>
+`;
