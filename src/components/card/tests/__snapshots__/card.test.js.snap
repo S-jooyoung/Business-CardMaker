@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card render 1`] = `
+<li
+  className="card dark"
+>
+  <img
+    alt="profile photo"
+    className="avatar"
+    src="/images/default_logo.png"
+  />
+  <div
+    className="info"
+  >
+    <h1
+      className="name"
+    >
+      test
+    </h1>
+    <p
+      className="company"
+    >
+      test
+    </p>
+    <p
+      className="title"
+    >
+      test
+    </p>
+    <p
+      className="email"
+    >
+      jooyoung.dev@gmail.com
+    </p>
+    <p
+      className="message"
+    >
+      test
+    </p>
+  </div>
+</li>
+`;
