@@ -10,9 +10,11 @@ const ImageFileInput = ({ imageUploader, name, onFileChange }) => {
   };
 
   const onChange = async (event) => {
+    console.log(event.target.files[0]);
     SetLoading(true);
     const uploaded = await imageUploader.upload(event.target.files[0]);
 
+    console.log(uploaded);
     onFileChange({
       name: uploaded.original_filename,
       url: uploaded.url,
@@ -23,6 +25,7 @@ const ImageFileInput = ({ imageUploader, name, onFileChange }) => {
   return (
     <div className={styles.container}>
       <input
+        data-testid="test-onChange"
         className={styles.input}
         ref={inputRef}
         type="file"
@@ -32,6 +35,7 @@ const ImageFileInput = ({ imageUploader, name, onFileChange }) => {
       ></input>
       {!loading && (
         <button
+          data-testid="test-button"
           className={`${styles.button} ${name ? styles.yellow : styles.grey}`}
           onClick={onButtonClick}
         >
