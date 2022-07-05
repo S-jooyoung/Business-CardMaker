@@ -1,12 +1,13 @@
 // import dependencies
 import React from "react";
 import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
 
 // import custom-component
 import ImageFileInput from "../image_file_input";
 
 // import snapshot-testing methods
-import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 
 describe("Image_file_input", () => {
   let ImageFileInputComponent;
@@ -20,6 +21,11 @@ describe("Image_file_input", () => {
     ImageFileInputComponent = (
       <ImageFileInput upload={upload} onFileChange={onFileChange} name={name} />
     );
+  });
+
+  it("redner", () => {
+    const component = renderer.create(ImageFileInputComponent).toJSON();
+    expect(component).toMatchSnapshot();
   });
 
   describe("Button Click", () => {

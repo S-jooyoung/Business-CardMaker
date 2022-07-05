@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image_file_input redner 1`] = `
+<div
+  className="container"
+>
+  <input
+    accept="image/*"
+    className="input"
+    data-testid="test-onChange"
+    name="file"
+    onChange={[Function]}
+    type="file"
+  />
+  <button
+    className="button yellow"
+    data-testid="test-button"
+    onClick={[Function]}
+  >
+    test
+  </button>
+</div>
+`;
